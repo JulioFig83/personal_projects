@@ -23,4 +23,9 @@ charge_e  = 1.6e-19
 
 a_0 = 4*np.pi * epsilon_0 * hbar**2 / (mass_e * charge_e**2)
 
-print("Bohr radius is: ", a_0)
+# Printing the result out in a formated way v
+# example %8.3e    8: 8 digits
+#                  3: 3 decimal numbers
+#                  e: scientific 
+
+print('Bohr radius is %8.3e' %a_0)
