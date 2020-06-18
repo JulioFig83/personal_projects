@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 # 1k data points
 data_points = 10000
-mydata      = np.random.rand(data_points)
+mydata      = np.random.normal(loc = 0.0, scale = 1.0, size = data_points )
 
 # Getting the average and sigma (stadnard deviation)
 
@@ -22,5 +22,5 @@ print('Average +- S.D = %8.3f +- %8.3f' %(np.average(mydata), np.std(mydata)))
 
 # Shows the distribution of mydata
 
-plt.plot(mydata, 'b.')
+plt.plot(mydata, 'b,')
 plt.show()
