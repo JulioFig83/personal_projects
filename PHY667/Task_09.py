@@ -17,7 +17,7 @@ mydata      = np.random.normal(loc = 0.0, scale = 1.0, size = data_points)
 
 # Touple number because np.histogram returns two values
 
-P, bins = np.histogram(mydata, bins = 12)
+P, bins = np.histogram(mydata, bins = 20, normed= True)
 
 # Plotting the histogram
 
