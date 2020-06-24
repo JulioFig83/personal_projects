@@ -24,25 +24,25 @@ np.savetxt("my_data.txt",random_data)
 # Now that I have the data, lets read it and 
 # do stuff with it.
 
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 # But now is only the second column
 
 f = np.loadtxt("my_data.txt")
 
 mean = sum(f[:,1])/len(f[:,1]) 
+mean_sq = sum(f[:,1]**2)/len(f[:,0])
 
+print("The mean is: \n", mean)
+print("The mean squared is: \n", mean_sq)
 
-# mean_sq = sum(the_file**2)/len(the_file)
+# Calculating the geometric mean of n quantities
+# geo_mean = exp((1/n)*sum(log(x_i)))
 
-# print("The mean is: \n", mean)
-# print("The mean squared is: \n", mean_sq)
-
-
-# # Calculating the geometric mean of n quantities
-# # geo_mean = exp((1/n)*sum(log(x_i)))
-
-# geo_mean = np.exp((1/len(the_file)*sum(np.log(the_file))))
-
-# print("Geometric mean is: \n", geo_mean)
+geo_mean = np.exp((1/len(f[:,0])*sum(np.log(f[:,1]))))
+print("Geometric mean is: \n", geo_mean)
 
 
 
